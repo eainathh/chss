@@ -23,7 +23,7 @@ class UserFactory extends Factory
         return [
             'id_empresa'=>'1',
             'name' => 'Dvelopers',
-            'email' => 'rafael@dvelopers.com.br',
+            'email' => 'equipe@dvelopers.com.br',
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
