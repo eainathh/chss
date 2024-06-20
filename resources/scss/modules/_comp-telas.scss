@@ -1,0 +1,154 @@
+.resum-levantamento{
+    max-width: 90%;
+    margin-bottom: 20px;
+    input{
+        border: none;
+        background: none;
+        width: 100%;
+        text-align: right;
+        &:focus{
+            outline: none;
+        }
+    }
+    .row{
+        margin: 0;
+        border-bottom: 1px solid $gray-300;
+        &:first-child{
+            border-top: 1px solid $gray-300;
+        }
+        &>div{
+            border-left:  1px solid $gray-300;
+            &:last-child{
+                border-right:  1px solid $gray-300;
+            }
+        }
+       
+    }
+}
+.comp-levantamento{
+    max-width: 90%;
+    input{
+        border: none;
+        background: none;
+        width: 100%;
+        
+        &:focus{
+            outline: none;
+        }
+    }
+    .row{
+        margin: 0;
+    }
+    .group{
+        position: relative;
+        margin-bottom: 50px;
+        &:after{
+            content: "";
+            height: 40px;
+            width: 80px;
+            top: 99%;
+            left: 0;
+            position: absolute;
+            z-index: 1;
+         
+        }
+       .row{
+        position: relative;
+        border-bottom: 1px solid $gray-400;
+        &:after{
+            content: "";
+            height: 32px;
+            width: 80px;
+            left: 99%;
+            position: absolute;
+            z-index: 1;
+        }
+        .addRow{
+            position: absolute;
+            background: #fff;
+            color: $primary;
+            width: 25px;
+            height: 25px;
+            border: 0;
+            border-radius: 50%;
+            left: calc(100% + 10px);
+            box-shadow: 0 0 5px #d7d7d7;
+            padding: 0;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 25px;
+            display: none;
+            z-index: 2;
+            cursor: pointer;
+            &:hover{
+                background: $gray-300;
+                transition: 0.2s all linear;
+            }
+        }
+        .delRow{
+            position: absolute;
+            background: #fff;
+            color: $primary;
+            width: 25px;
+            height: 25px;
+            border: 0;
+            border-radius: 50%;
+            left: calc(100% + 40px);
+            box-shadow: 0 0 5px #d7d7d7;
+            padding: 0;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 25px;
+            display: none;
+            z-index: 2;
+            cursor: pointer;
+            &:hover{
+                background: $gray-300;
+                transition: 0.2s all linear;
+            }
+        }
+  
+        &:hover{
+            .addRow,.delRow{
+                display: block;
+            }
+            
+        }
+       }
+       .addGroup,.delGroup{
+                position: absolute;
+                background: #fff;
+                color: $primary;
+                width: 25px;
+                height: 25px;
+                border: 0;
+                border-radius: 50%;
+                top: calc(100% + 3px);
+                box-shadow: 0 0 5px #d7d7d7;
+                padding: 0;
+                text-align: center;
+                vertical-align: middle;
+                line-height: 25px;
+                display: none;
+                z-index: 2;
+                cursor: pointer;
+                &:hover{
+                    background: $gray-300;
+                    transition: 0.2s all linear;
+                }
+       }
+
+       &:hover{
+        .addGroup,.delGroup{
+            display: block;
+        }
+        
+    }
+       .addGroup{
+        left: 0px;
+       }
+       .delGroup{
+         left: 40px;
+       }
+    }
+}
