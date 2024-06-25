@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Mail;
 use Image; //Intervention Image
 use Illuminate\Support\Facades\Storage; //Laravel Filesystem
 use Illuminate\Support\Str;
+
 class ColaboradoresController extends Controller
 {
     public function index(){

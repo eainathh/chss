@@ -79,7 +79,7 @@
 
     
     <li class="nav-item">
-      <a class="nav-link  " href="{{route('admin.feedbacks.index')}}">
+      <a class="nav-link  " href="">
         <div class="icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
         <i class="ni ni-satisfied"></i>
         </div>

@@ -5,8 +5,6 @@ use App\Http\Controllers\Admin\IndexController;
 use App\Http\Controllers\Admin\ProjetosController;
 use App\Http\Controllers\Admin\ColaboradoresController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FeedbackRespostasController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -54,9 +52,8 @@ Route::name('admin.')->middleware('auth')->group(function () {
         Route::post('/upload-profile', ['as'=>'upload-profile','uses'=>'uploadProfile']);
     });
 
-    Route::name('feedbacks.')->prefix('feedbacks')->controller(FeedbackRespostasController::class)->group(function() {
+    Route::name('feedbacks.')->prefix('feedbacks')->controller(FeedbacksRespostasController::class)->group( function() {
         Route::get('/', 'index')->name('index');
-        Route::post('/','store')->name('store');
     });
 });
 
